@@ -8,7 +8,7 @@
     <br>
 
     <h4>Gender :</h4>
-    <input type="radio" id="gender_male" name="gender" value="male">
+    <input type="radio" id="gender_male" name="gender" value="male" required>
     <label for="gender_male">Male</label>
 
     <br>
@@ -31,7 +31,7 @@
 
     <br>
 
-    <input type="radio" id="reason_death" name="reason" value="death">
+    <input type="radio" id="reason_death" name="reason" value="death" required>
     <label for="reason_death">Death of beloved pet or family member</label>
 
     <br>
@@ -67,7 +67,11 @@ if (isset($_GET['name'])) {
 
 Please excuse my child, " . $_GET['name'] . ", from school on " . $date . ", as they were unwell due to illness. Thank you for your understanding.
 
-Sincerely,";
+<br><br>
+
+Sincerely,
+<br><br>
+.$date";
                 break;
             case 'death' :
                 echo "Respected " . ($_GET['teacher']) . ", 
