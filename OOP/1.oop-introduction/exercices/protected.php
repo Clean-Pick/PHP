@@ -3,9 +3,9 @@
 class Beverage
 {
     // Properties
-    private $color;
-    private $price;
-    private $temperature;
+    protected $color;
+    protected $price;
+    protected $temperature;
 
     public function __construct()
     {
@@ -53,8 +53,8 @@ class Beverage
 class Beer extends Beverage
 {
     // Properties
-    private $name;
-    private $alcoholPercentage;
+    protected $name;
+    protected $alcoholPercentage;
 
     public function __construct(string $name, float $alcoholPercentage)
     {
@@ -82,7 +82,7 @@ class Beer extends Beverage
 
     public function getBeerInfo(): string
     {
-        return "This beer is named {$this->name}, is {$this->getTemperature()} and {$this->getColor()}, the alcohol percentage is {$this->alcoholPercentage}%. Price: {$this->getPrice()}€";
+        return "This beer is named {$this->name}, is {$this->temperature} and {$this->color}, the alcohol percentage is {$this->alcoholPercentage}%. Price: {$this->price}€";
     }
 }
 
